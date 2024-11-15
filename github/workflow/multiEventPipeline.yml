@@ -4,6 +4,7 @@ name: "multi event pipeline / workflow" #name of the pipeline
     push:  # Event: whenever a push is made to the repository on the master branch
        branches:
              -master
+             -test
 
    jobs:
       on-push: #job name
