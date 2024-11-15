@@ -24,5 +24,13 @@ name: "multi event pipeline / workflow" #name of the pipeline
           steps: # steps to be executed in the job
               - name: "Runnning on master/test push" # step 1
                  run: echo "Running on master push"
+     
+      on workflow_dispatch: # job 3
+       if: github.event_name = 'workflow_dispatch'
+          runs-on: ubuntu-latest
+          steps: # steps to be executed in the job
+              - name: "Runnning on dispatch" # step 1
+                 run: echo "Running on dispatch"
+
 
 
